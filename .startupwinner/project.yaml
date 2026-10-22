@@ -1,0 +1,37 @@
+# StartUpWinner manifest (spec v1). Progress lives in TODO.md, tagged with <!-- sw:... --> comments.
+# Fill in the TODOs; the dashboard reads this file from GitHub.
+spec_version: 1
+
+project:
+  id: my-app                     # TODO: a slug for your project
+  name: My App                   # TODO
+  tagline: One line              # TODO
+  type: web+mobile               # web | mobile | web+mobile
+
+stage: mvp
+
+targets: {}                      # TODO: launch dates, e.g. { web: 2027-01-15, ios: 2027-02-01, android: 2027-02-01 }
+
+market:                          # TODO: one sentence each
+  problem: ""
+  target_user: ""
+  pricing: "Free; Pro $8/mo"
+
+deploy:
+  web: { host: vercel }                           # TODO: add url: https://your-domain once it is live
+  ios: { bundle_id: com.example.myapp }           # TODO: plus app_store_id: "…" once the App Store Connect record exists
+  android: { package: com.example.myapp }
+
+services:                        # cost: null = not known yet
+  - { name: vercel,   category: hosting,    plan: hobby, cost: { amount: 0, currency: USD, period: month }, billing: manual }
+  - { name: supabase, category: database,   plan: free,  cost: { amount: 0, currency: USD, period: month }, billing: manual }
+  - { name: stripe,   category: payments,   cost: null, billing: manual }   # Stripe takes a fee per payment
+  - { name: resend,   category: email,      plan: free,  cost: { amount: 0, currency: USD, period: month }, billing: manual }
+  - { name: posthog,  category: analytics,  plan: free,  cost: { amount: 0, currency: USD, period: month }, billing: manual }
+  - { name: sentry,   category: monitoring, plan: free,  cost: { amount: 0, currency: USD, period: month }, billing: manual }
+  - { name: expo-eas, category: hosting,    plan: free,  cost: { amount: 0, currency: USD, period: month }, billing: manual }
+  - { name: apple-developer, category: other, cost: { amount: 99, currency: USD, period: year }, billing: manual }
+  - { name: google-play,     category: other, cost: { amount: 25, currency: USD, period: one_time }, billing: manual }
+  - { name: domain,   category: domain,     cost: null, billing: manual }
+
+competitors: []                  # run the research prompt from the Market tab, or /startupwinner:research

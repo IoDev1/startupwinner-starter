@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+allowBuilds:
+  "@sentry/cli": true
+  core-js: false
+  esbuild: true
+  sharp: false
+  unrs-resolver: false
+# React Native tooling expects a flat node_modules.
+nodeLinker: hoisted
