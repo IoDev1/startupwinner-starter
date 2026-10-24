@@ -27,7 +27,7 @@ Started from the [StartUpWinner](https://start-up-winner.vercel.app) starter, so
 | Account deletion on web and in the app (Apple requires it) | `apps/web/src/app/account`, `apps/web/src/app/api/account/delete` |
 | Product analytics (PostHog) on sign-in, checkout, subscription and deletion | `apps/web/src/lib/analytics.ts`, `apps/web/src/instrumentation-client.ts` |
 | Error tracking (Sentry) in the browser, the server and the edge | `apps/web/src/instrumentation*.ts` |
-| Progress tracked in TODO.md for the StartUpWinner dashboard | `TODO.md`, `.startupwinner/project.yaml` |
+| The StartUpWinner checklist and project rules, for the dashboard and your agent | `.startupwinner/` (checklist, project file, rules), `CLAUDE.md` |
 
 Every service switches on when its keys are set, so the app builds and runs before any of them exist.
 
@@ -45,7 +45,7 @@ The mobile app: [apps/mobile/README.md](apps/mobile/README.md).
 
 ## Set up the services
 
-Do them in this order; each one ticks items in TODO.md.
+Do them in this order; each one ticks items in `.startupwinner/checklist.md`.
 
 1. **Supabase** (database and sign-in): create a project, run `supabase/migrations/*.sql` in the SQL editor (or `supabase db push` with the CLI), and copy the URL, publishable key and secret key into `.env.local`. Under Authentication → URL Configuration, set the Site URL to your address and add `http://localhost:3000/auth/confirm` and `https://<your domain>/auth/confirm` to the redirect URLs.
 2. **Sign-in email**: under Authentication → Emails → Magic Link, put both the link and the code in the email, so it works on the web and in the app:
@@ -64,4 +64,4 @@ Then make it yours: `apps/web/src/lib/site.ts` (name, promise, features, prices)
 
 ## Track it
 
-Connect the repo at [StartUpWinner](https://start-up-winner.vercel.app): it reads TODO.md and `.startupwinner/project.yaml` and shows what's left before launch on web, iOS and Android. Fill in `.startupwinner/project.yaml` first (or run `/startupwinner:setup` in Claude Code).
+Connect the repo at [StartUpWinner](https://start-up-winner.vercel.app): it reads `.startupwinner/` (the checklist and project file) and TODO.md and shows what's left before launch on web, iOS and Android. Fill in `.startupwinner/project.yaml` first (or run `/startupwinner:setup` in Claude Code).
