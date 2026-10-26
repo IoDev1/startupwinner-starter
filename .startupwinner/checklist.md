@@ -27,6 +27,8 @@ The StartUpWinner methodology for this project, from idea to live on web, iOS an
 - [~] **Error tracking:** Sentry is wired on web and server; set the DSN <!-- sw:prelaunch.error_tracking -->
 - [~] **Privacy and terms:** starter pages are in; have them reviewed and remove the starter note <!-- sw:prelaunch.legal -->
 - [ ] **Database backups** on (Supabase Pro daily backups, or a scheduled dump) <!-- sw:prelaunch.backups -->
+- [ ] **Security check:** run `/startupwinner:security`; ticked when nothing critical or high is left open <!-- sw:prelaunch.security_check -->
+- [ ] **Tested like a real user:** run `/startupwinner:qa` on a preview deploy; ticked when its flows pass <!-- sw:prelaunch.qa_pass -->
 
 ## Web
 
