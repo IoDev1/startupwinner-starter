@@ -56,7 +56,7 @@ The StartUpWinner methodology for this project, from idea to live on web, iOS an
 
 ## Launch
 
-- [ ] **3 launch channels** chosen (Product Hunt, Reddit, X, Hacker News, niche communities, newsletters) <!-- sw:launch.channels -->
+- [ ] **1 or 2 launch channels** where your buyers already are (Product Hunt, Show HN, Reddit, X, a niche community, a newsletter) <!-- sw:launch.channels -->
 - [ ] **Launch assets:** demo video or GIF, launch post <!-- sw:launch.assets -->
 - [ ] **Launched** on at least one channel <!-- sw:launch.executed -->
 - [ ] **Feedback channel** monitored (email, Discord or in-app) <!-- sw:launch.feedback_loop -->
